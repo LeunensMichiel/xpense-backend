@@ -11,4 +11,8 @@ validateEnv();
 
 const app = new App([new IndexRoute(), new UsersRoute(), new AuthRoute()]);
 
-app.listen();
+try {
+  app.listen();
+} catch (e) {
+  throw new Error(e.message);
+}
