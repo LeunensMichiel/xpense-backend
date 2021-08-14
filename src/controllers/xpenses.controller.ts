@@ -91,3 +91,5 @@ class XpensesController {
     }
   };
 }
+
+export default XpensesController
