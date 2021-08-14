@@ -14,7 +14,7 @@ class UserService {
   }
 
   public async findUserById(userId: string): Promise<User> {
-    if (isEmpty(userId)) throw new HttpException(400, "No userId");
+    if (isEmpty(userId)) throw new HttpException(400, 'No userId');
 
     const findUser: User = await this.users.findOne({ _id: userId });
     if (!findUser) throw new HttpException(409, "You're not user");
@@ -23,7 +23,7 @@ class UserService {
   }
 
   public async createUser(userData: CreateUserDto): Promise<User> {
-    if (isEmpty(userData)) throw new HttpException(400, "No userData");
+    if (isEmpty(userData)) throw new HttpException(400, 'No userData');
 
     const findUser: User = await this.users.findOne({ email: userData.email });
     if (findUser)
@@ -45,17 +45,14 @@ class UserService {
     userId: string,
     userData: CreateUserDto,
   ): Promise<User> {
-    if (isEmpty(userData)) throw new HttpException(400, "No userData");
+    if (isEmpty(userData)) throw new HttpException(400, 'No userData');
 
     if (userData.email) {
       const findUser: User = await this.users.findOne({
         email: userData.email,
       });
       if (findUser && findUser._id != userId)
-        throw new HttpException(
-          409,
-          `Email ${userData.email} already exists`,
-        );
+        throw new HttpException(409, `Email ${userData.email} already exists`);
     }
 
     if (userData.password) {

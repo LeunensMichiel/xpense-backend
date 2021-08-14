@@ -1,4 +1,4 @@
-import {  IsDate, IsNumber, IsString, IsUrl } from 'class-validator';
+import { IsDate, IsNumber, IsString, IsUrl } from 'class-validator';
 
 export class CreateXpenseDto {
   @IsString()

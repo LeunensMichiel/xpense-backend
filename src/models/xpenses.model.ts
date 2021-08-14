@@ -17,7 +17,7 @@ const xpenseSchema: Schema = new Schema({
   cost: {
     type: Number,
     required: true,
-    min: 0
+    min: 0,
   },
   category: {
     type: String,

@@ -9,7 +9,7 @@ Make sure you've installed
 1. Node > V14
 2. Docker Desktop
 3. `npm i -g ts-node`
-   
+
 ## Install packages
 
 `npm i`
@@ -30,4 +30,5 @@ url: mongodb://localhost:27017/mongoose
 `npm run dev`
 
 ## start prod server
+
 `npm run build && npm run start`
