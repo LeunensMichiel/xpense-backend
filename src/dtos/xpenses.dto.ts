@@ -1,4 +1,4 @@
-import { IsDate, IsNumber, IsString, IsUrl } from 'class-validator';
+import { IsDateString, IsNumber, IsString, IsUrl } from 'class-validator';
 
 export class CreateXpenseDto {
   @IsString()
@@ -7,7 +7,7 @@ export class CreateXpenseDto {
   @IsUrl()
   public imageUrl: string;
 
-  @IsDate()
+  @IsDateString()
   public date: Date;
 
   @IsNumber()

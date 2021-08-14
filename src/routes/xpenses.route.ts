@@ -5,7 +5,7 @@ import validationMiddleware from '@/middlewares/validation.middleware';
 import { Router } from 'express';
 
 class XpensesRoute implements Routes {
-  public path = './xpenses';
+  public path = '/xpenses';
   public router = Router();
   public xpensesController = new XpensesController();
 
